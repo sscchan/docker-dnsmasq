@@ -1,5 +1,5 @@
 # docker-dnsmasq
-A docker container definition for DNSMASQ for local homelab using the .home domain.
+A dnsmasq DNS only service for local homelab using the .home domain.
 
 # Build
 `docker build -t docker-dnsmasq .`

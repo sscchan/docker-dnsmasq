@@ -16,10 +16,6 @@ RUN echo "local=/home/" >> /etc/dnsmasq.conf
 RUN echo "addn-hosts=/etc/custom_hosts" >> /etc/dnsmasq.conf
 RUN echo "port=5353" >> /etc/dnsmasq.conf
 
-# (TEMP) Configure DNS entries
-# TODO: This should be mounted at container start
-RUN echo "10.0.0.123  mealplanner.home" > /etc/custom_hosts
-
 ENTRYPOINT ["dnsmasq", "-k"]
 EXPOSE 5353/udp
 EXPOSE 5353/tcp
